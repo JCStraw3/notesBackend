@@ -12,6 +12,8 @@ class CreateNotesTable extends Migration {
     public function up(){
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -24,4 +26,5 @@ class CreateNotesTable extends Migration {
     public function down(){
         Schema::drop('notes');
     }
+
 }
