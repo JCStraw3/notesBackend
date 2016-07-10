@@ -16,9 +16,17 @@ class NoteController extends Controller {
 
 	public function readMany(){
 
+		$notes = Note::latest()->get();
+
+		return json_encode($notes);
+
 	}
 
-	public function readOne(){
+	public function readOne($id){
+
+		$note = Note::findOrFail($id);
+
+		return json_encode($note);
 
 	}
 
