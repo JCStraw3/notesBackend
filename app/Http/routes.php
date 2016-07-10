@@ -18,3 +18,4 @@
 Route::get('/', 'NoteController@readMany');
 Route::get('/{id}', 'NoteController@readOne');
 Route::post('/create', 'NoteController@create');
+Route::put('/update', 'NoteController@update');

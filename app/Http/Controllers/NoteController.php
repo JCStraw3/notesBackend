@@ -36,7 +36,13 @@ class NoteController extends Controller {
 
 	}
 
-	public function update(){
+	public function update($id, Requests\UpdateNoteRequest $request){
+
+		$note = Note::findOrFail($id);
+
+		$note->update($request->all());
+
+		return json_encode($note);
 
 	}
 
