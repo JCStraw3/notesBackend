@@ -46,7 +46,13 @@ class NoteController extends Controller {
 
 	}
 
-	public function delete(){
+	public function delete($id){
+
+		$note = Note::findOrFail($id);
+
+		$note->delete($note);
+
+		// return
 
 	}
 
