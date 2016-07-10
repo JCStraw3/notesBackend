@@ -10,7 +10,13 @@ use App\Note;
 
 class NoteController extends Controller {
 
-	public function create(){
+	public function create(Requests\CreateNoteRequest $request){
+
+		$note = new Note($request->all());
+
+		$note->save();
+
+		return json_encode($note);
 
 	}
 
