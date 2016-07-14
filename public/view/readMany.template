@@ -1,0 +1,5 @@
+<div id='main'>
+	<p>This is a paragraph.</p>
+
+	<p>This is a paragraph with a <%= newVariable %> variable.</p>
+</div>
