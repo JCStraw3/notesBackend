@@ -11,9 +11,8 @@
 					context.render('/view/readMany.template', {
 						'title': note.title,
 						'body': note.body,
-					}, function(view){
-						$('#body').html(view);
-					});
+					})
+						.appendTo($('body'));
 				});
 			});
 		
