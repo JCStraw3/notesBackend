@@ -4,12 +4,18 @@
 
 	app.get('#/', function(context){
 
-		context.render('/view/readMany.template', {
-			'myVariable': 'Header',
-			'newVariable': 'new',
-		}, function(view){
-			$('#body').html(view);
-		});
+		this.load('/readMany.json')
+			.then(function(notes){
+				$.each(notes, function(i, note){
+					context.log(note.title, '-', note.body);
+					context.render('/view/readMany.template', {
+						'title': note.title,
+						'body': note.body,
+					}, function(view){
+						$('#body').html(view);
+					});
+				});
+			});
 		
 	});
 

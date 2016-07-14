@@ -1,5 +1,5 @@
-<div id='main'>
-	<p>This is a paragraph.</p>
+<div id='note'>
+	<p><%= title %></p>
 
-	<p>This is a paragraph with a <%= newVariable %> variable.</p>
+	<p><%= body %></p>
 </div>
