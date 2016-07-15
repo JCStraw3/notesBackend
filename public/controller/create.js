@@ -11,4 +11,9 @@
 
 	});
 
+	app.post('#/create', function(context){
+		var params = this.params;
+		console.log(params);
+	});
+
 })();
