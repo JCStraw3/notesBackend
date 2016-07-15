@@ -1,3 +1,5 @@
-<div id='main'>
-	<p>This is another paragraph.</p>
+<div id='note'>
+	<p><%= title %></p>
+
+	<p><%= body %></p>
 </div>

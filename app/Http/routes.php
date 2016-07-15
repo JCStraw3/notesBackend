@@ -16,7 +16,7 @@
 // });
 
 Route::get('/readMany.json', 'NoteController@readMany');
-Route::get('/{id}', 'NoteController@readOne');
+Route::get('/readOne.json/{id}', 'NoteController@readOne');
 Route::post('/create', 'NoteController@create');
 Route::put('/{id}/update', 'NoteController@update');
 Route::delete('/{id}/delete', 'NoteController@delete');

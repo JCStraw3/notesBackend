@@ -2,12 +2,20 @@
 
 	var app = Sammy.apps.body;
 
-	app.get('#/page', function(context){
+	app.get('#/:id', function(context){
+		// var id = this.params['id'];
+		// console.log(id);
 
-		context.render('/view/readOne.template', {
-		}, function(view){
-			$('#body').html(view);
-		});
+		// this.load('/readOne.json/1')
+		// 	.then(function(note){
+		// 		console.log(note);
+		// 		console.log(note.title, '-', note.body);
+		// 		context.render('/view/readOne.template', {
+		// 			'title': note.title,
+		// 			'body': note.body,
+		// 		})
+		// 			.appendTo($('body'));
+		// 	});
 		
 	});
 
