@@ -2,7 +2,7 @@
 
 	var app = Sammy.apps.body;
 
-	app.get('#/:id', function(context){
+	app.get('#/note/:id', function(context){
 		// var id = this.params['id'];
 		// console.log(id);
 
