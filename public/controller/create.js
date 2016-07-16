@@ -5,15 +5,34 @@
 	app.get('#/create', function(context){
 
 		context.render('/view/create.template', {
-		}, function(view){
-			$('#body').html(view);
+		}, function(output){
+			$('#content').html(output);
 		});
 
 	});
 
 	app.post('#/create', function(context){
-		var params = this.params;
-		console.log(params);
+
+		var action = '/create.json';
+
+		var newNote = {
+			title: this.params['title'],
+			body: this.params['body'],
+		};
+
+		$.ajax({
+			url: action,
+			method: 'post',
+			data: newNote,
+			dataType: 'json',
+			error: function(result){
+				console.log(result);
+			}
+		})
+		.done(function(context){
+			
+		});
+
 	});
 
 })();

@@ -1,4 +1,4 @@
-<div id='note-create'>
+<div>
 	<form action='#/create' method='post'>
 		<div>
 			<input name='title' type='text' placeholder='Title'>
