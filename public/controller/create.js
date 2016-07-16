@@ -30,7 +30,7 @@
 			}
 		})
 		.done(function(context){
-			
+			alert('You can created a new note.');
 		});
 
 	});
