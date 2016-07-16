@@ -2,18 +2,15 @@
 
 	var app = Sammy.apps.body;
 
-	app.get('#/', function(context){
+	app.get('#/', function(context, next){
 
-		this.load('/readMany.json')
-			.then(function(notes){
-				$.each(notes, function(i, note){
-					context.render('/view/readMany.template', {
-						'title': note.title,
-						'body': note.body,
-					})
-						.appendTo($('body'));
-				});
+		$.getJSON('/readMany.json', function(data){
+			context.render('/view/readMany.template', {
+				notes: data,
+			}, function(output){
+				$('#content').html(output);
 			});
+		});
 		
 	});
 

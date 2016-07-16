@@ -1,5 +1,7 @@
-<div id='note'>
-	<p><%= title %></p>
+<% for(var i=0; i<notes.length; i++){ %>
+	<div>
+		<p><%= notes[i].title %></p>
 
-	<p><%= body %></p>
-</div>
+		<p><%= notes[i].body %></p>
+	</div>
+<% } %>

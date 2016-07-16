@@ -1,5 +1,5 @@
-<div id='note'>
-	<p><%= title %></p>
+<div>
+	<p><%= note.title %></p>
 
-	<p><%= body %></p>
+	<p><%= note.body %></p>
 </div>
