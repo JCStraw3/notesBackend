@@ -1,15 +1,13 @@
 <div>
-	<form action='#/create' method='post'>
-		<div>
-			<input name='title' type='text' placeholder='Title'>
-		</div>
+	<div>
+		<input id='title' name='title' type='text' placeholder='Title'>
+	</div>
 
-		<div>
-			<textarea name='body' placeholder='Body'></textarea>
-		</div>
-		
-		<div>
-			<button type='submit'>Create</button>
-		</div>
-	</form>
+	<div>
+		<textarea id='body' name='body' placeholder='Body'></textarea>
+	</div>
+	
+	<div>
+		<button id='create'>Create</button>
+	</div>
 </div>
