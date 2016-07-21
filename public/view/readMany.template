@@ -1,6 +1,8 @@
 <% for(var i=0; i<notes.length; i++){ %>
 	<div>
-		<p><%= notes[i].title %></p>
+		<a href='#/note/<%= notes[i].id %>'>
+			<p><%= notes[i].title %></p>
+		</a>
 
 		<p><%= notes[i].body %></p>
 	</div>
