@@ -12,7 +12,10 @@ class NoteController extends Controller {
 
 	public function create(Requests\CreateNoteRequest $request){
 
-		$note = new Note($request->all());
+		$note = new Note([
+			'title' => $request->title,
+			'body' => $request->body,
+		]);
 
 		$note->save();
 
