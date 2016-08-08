@@ -12,6 +12,33 @@
 					note: data,
 				}, function(output){
 					$('#content').html(output);
+
+					// Update a note.
+
+					$('#update').click(function(event){
+
+						var action = '/update.json';
+
+						var updateNote = {
+							id: $('#id').val(),
+							title: $('#title').val(),
+							body: $('#body').val(),
+							_method: 'put',
+						}
+
+						$.ajax({
+							url: action,
+							method: 'post',
+							data: updateNote,
+							error: function(result){
+								console.log(result);
+							}
+						})
+						.done(function(context){
+							alert('You have updated this note.');
+						});
+
+					});
 				});
 			});
 		

@@ -11,12 +11,8 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/readMany.json', 'NoteController@readMany');
 Route::get('/readOne.json/{id}', 'NoteController@readOne');
 Route::post('/create.json', 'NoteController@create');
-Route::put('/{id}/update', 'NoteController@update');
+Route::put('/update.json', 'NoteController@update');
 Route::delete('/{id}/delete', 'NoteController@delete');
