@@ -8,6 +8,8 @@
 		}, function(output){
 			$('#content').html(output);
 
+			// Create a note in the databas.
+
 			$('#create').click(function(event){
 
 				var action = '/create.json';
@@ -27,9 +29,7 @@
 					}
 				})
 				.done(function(context){
-					$('#title').val('');
-					$('#body').val('');
-					alert('You can created a new note.');
+					window.location = '#/';
 				});
 
 			});

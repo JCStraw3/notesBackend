@@ -13,7 +13,7 @@
 				}, function(output){
 					$('#content').html(output);
 
-					// Update a note.
+					// Update a note in the database.
 
 					$('#update').click(function(event){
 
