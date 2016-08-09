@@ -4,6 +4,10 @@
 	<p><%= note.body %></p>
 </div>
 
+<div>
+	<button id='delete'>Delete</button>
+</div>
+
 <div id='edit-note'>
 	<div>
 		<input id='id' name='id' type='hidden' value='<%= note.id %>'>
