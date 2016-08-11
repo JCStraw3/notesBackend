@@ -11,6 +11,28 @@
 |
 */
 
+// Main Laravel route will redirect to Sammy application.
+
+Route::get('/', function(){
+	return redirect('index.html');
+});
+
+// Home route.
+
+Route::get('/home.json', 'HomeController@viewHome');
+
+// Registration routes.
+
+Route::post('/register.json', 'Auth\AuthController@postRegister');
+
+// Authentication routes.
+
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Notes routes.
+
 Route::get('/readMany.json', 'NoteController@readMany');
 Route::get('/readOne.json/{id}', 'NoteController@readOne');
 Route::post('/create.json', 'NoteController@create');

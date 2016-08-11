@@ -5,10 +5,11 @@
 	app.get('#/create', function(context){
 
 		context.render('/view/create.template', {
+			//
 		}, function(output){
 			$('#content').html(output);
 
-			// Create a note in the databas.
+			// Create a note in the database.
 
 			$('#create').click(function(event){
 
