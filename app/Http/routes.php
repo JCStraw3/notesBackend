@@ -27,9 +27,8 @@ Route::post('/register.json', 'Auth\AuthController@postRegister');
 
 // Authentication routes.
 
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::post('/login.json', 'Auth\AuthController@postLogin');
+Route::get('/logout.json', 'Auth\AuthController@getLogout');
 
 // Notes routes.
 
