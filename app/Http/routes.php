@@ -30,6 +30,10 @@ Route::post('/register.json', 'Auth\AuthController@postRegister');
 Route::post('/login.json', 'Auth\AuthController@postLogin');
 Route::get('/logout.json', 'Auth\AuthController@getLogout');
 
+// User routes.
+
+Route::get('/user.json/{id}', 'UserController@readOne');
+
 // Notes routes.
 
 Route::get('/readMany.json', 'NoteController@readMany');
