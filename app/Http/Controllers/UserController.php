@@ -12,9 +12,17 @@ use Auth;
 
 class UserController extends Controller {
 
-	public function readOne($id){
+	public function readOne(Request $request){
+
+		$id = $request->input('id');
+
+		var_dump($request->user);
 
 		// $authuser = Auth::user();
+
+		// if(!$id){
+		// 	$id = $authuser->id;
+		// }
 
 		$user = User::findOrFail($id);
 

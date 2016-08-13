@@ -4,23 +4,25 @@
 
 	app.get('#/user/:id', function(context){
 
-		var id = context.params.id;
+		console.log(context.params);
 
-		$.getJSON('/user.json/' + id)
-			.done(function(data){
+		// var id = context.params.id;
+
+		// $.getJSON('/user.json/' + id)
+		// 	.done(function(data){
 				
-				context.render('/view/nav.template', {
-					//
-				}, function(output){
-					$('#header').html(output);
-				});
+		// 		context.render('/view/nav.template', {
+		// 			//
+		// 		}, function(output){
+		// 			$('#header').html(output);
+		// 		});
 
-				context.render('/view/user.template', {
-					user: data,
-				}, function(output){
-					$('#content').html(output);
-				});
-			});
+		// 		context.render('/view/user.template', {
+		// 			user: data,
+		// 		}, function(output){
+		// 			$('#content').html(output);
+		// 		});
+		// 	});
 		
 	});
 

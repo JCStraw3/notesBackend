@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use Auth;
+
 class ViewComposerServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +15,7 @@ class ViewComposerServiceProvider extends ServiceProvider
      */
     public function boot(){
 
-        view()->composer('/public/view/nav.template', function($view){
+        view()->composer('/nav.template', function($view){
             $view->with('user', Auth::user());
         });
 
